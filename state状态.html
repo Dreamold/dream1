@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test"></div>
+<script src="../js/react.development.js"></script>
+<script src="../js/react-dom.development.js"></script>
+<script src="../js/babel.min.js"></script>
+<script type="text/babel">
+    class Whather extends React.Component {
+        constructor(props) {
+            super(props)
+            this.state = { isHot: false }
+            this.fun=this.fun.bind(this)
+            console.log(this);
+           
+        }
+        render(){
+           
+            const {isHot}=this.state
+            return <h1 onClick={this.fun}>今天天气很{isHot?"炎热":"凉爽"}</h1>
+        }
+       
+        fun(){
+            
+            this.setState({isHot:!this.state.isHot })
+            console.log(this.state);
+        }
+    }
+    ReactDOM.render(<Whather/>,document.querySelector(".test"))
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+    const content="今天天气晴朗"
+    const content1="hello"
+    const q="dahuang"
+    const VDOM=(<div className="{q}">{content}
+                     <div>{content1}</div>
+                </div>)
+    ReactDOM.render(VDOM,document.querySelector("body"))
+    const VDOM=React.createElement("div",)
+   
+    </script>
+</body>
+</html>
